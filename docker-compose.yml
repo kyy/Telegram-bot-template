@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  bot:
+    build: .
+    container_name: aiogram-bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      - BOT_TOKEN=${BOT_TOKEN}
+      - WH_BASE_URL=${WH_BASE_URL}
+      - WH_PATH=${WH_PATH}
+    volumes:
+      - ./logs:/app/logs
