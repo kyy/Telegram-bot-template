@@ -23,3 +23,8 @@ WH_PATH=адрес вебхука (пример: /secret-webhook-of-my-telegram-
 `pip install --upgrade wheel`
 
 `pip install -r requirements.txt`
+
+### Быстрый запуск в режиме polling
+`docker-compose build`
+
+`docker-compose run`

@@ -18,17 +18,17 @@ from dp import dp_connector
 logging.basicConfig(
     level=logging.INFO,
     format="[%(asctime)s] [%(levelname)s] [%(lineno)d] [%(name)s] [%(message)s]",
-    filename='webhook.log',
-    filemode='a'
+    # filename='webhook.log',
+    # filemode='a'
 )
 
 """
-https://localtunnel.github.io/www/
-fast test:
-1. 'npm install -g localtunnel'
-2. 'lt --port 8888'
-3. copy url, paste to 'BASE_URL'
-4. run webhook.py
+Быстрая проверка вебхука через локальное туннелирование
+npm install -g localtunnel
+lt --port 8888
+копируем полученный домен в .env WH_BASE_URL
+WH_PATH= оставляем пустым
+запускаем python run_webhook.py
 """
 PORT=8888
 BASE_URL: str = WH_BASE_URL
